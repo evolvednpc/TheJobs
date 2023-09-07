@@ -22,10 +22,11 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active" href="index.jsp">Home</a>
-                        <a class="nav-item nav-link" href="about.jsp">About Us</a>
-                        <a class="nav-item nav-link" href="services.jsp">Services</a>
-                        <a class="nav-item nav-link" href="consultant.jsp">Consultants</a>
+                        <a class="nav-item nav-link" href="#">About Us</a>
+                        <a class="nav-item nav-link" href="#">Services</a>
+                        <a class="nav-item nav-link" href="#">Consultants</a>
                         <a class="nav-item nav-link" href="applicantAppointment.jsp">Appointment</a>
+                        <a class="nav-item nav-link" href="applicant.jsp">Applicant</a>
                         <a class="nav-item nav-link" href="#">Contact</a>
                         <a class="nav-item nav-link" href="login.jsp">Login</a>
                     </div>
@@ -52,10 +53,11 @@
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>The Jobs: Consulting Agency
+                                <i class="fas fa-gem me-3"></i>Company name
                             </h6>
                             <p>
-                                We are the best Consulting Agency in the World.
+                                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -108,10 +110,10 @@
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Contact
                             </h6>
-                            <p><i class="fas fa-home me-3"></i> Colombo 07 10012, Sri Lanka</p>
+                            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
                             <p>
                                 <i class="fas fa-envelope me-3"></i>
-                                info@thejobsconsultnacy.com
+                                info@example.com
                             </p>
                             <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
                             <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
@@ -125,7 +127,8 @@
 
             <!-- Copyright -->
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © Copyright:
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
             </div>
             <!-- Copyright -->
         </footer>

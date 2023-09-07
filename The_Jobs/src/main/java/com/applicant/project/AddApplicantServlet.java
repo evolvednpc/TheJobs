@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newpackage;
+package com.applicant.project;
 
+import com.appointment.project.DBAPConnection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author User
  */
-public class LoginServlet extends HttpServlet {
+public class AddApplicantServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,24 +36,29 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet AddApplicantServlet</title>");            
             out.println("</head>");
             out.println("<body>");
             
-            //feth data from login form
-            
-            String logemail = request.getParameter("email");
-            String logpass = request.getParameter("password");
-            
-            UserDatabase db =  new UserDatabase(DBConnection.getConnection());
-            User user = db.logUser(logemail, logpass);
-            
-            if(user!=null){
-                HttpSession session = request.getSession();
-                session.setAttribute("logUser", user);
-                response.sendRedirect("main_index.jsp");
-            }else{
-                out.println("user not found");
+            String pnumber = request.getParameter("pnumber");
+            String name = request.getParameter("name");
+            String age = request.getParameter("age");
+            String gender = request.getParameter("gender");          
+            String nic = request.getParameter("nic");
+            String address = request.getParameter("address");
+            String email = request.getParameter("email");
+            String cnumber = request.getParameter("cnumber");          
+            String nationality = request.getParameter("nationality");
+            Applicants applicant = new Applicants(pnumber,name,age,gender,nic,address,email,cnumber,nationality);
+            try{
+                ApplicantsDao adao = new ApplicantsDao(DBAPConnection.getConnection());
+                if(adao.addApplicant(applicant)){
+                    response.sendRedirect("applicant.jsp");
+                }else{
+                    out.print("Error");
+                }
+                
+            }catch(IOException e){
             }
             
             out.println("</body>");

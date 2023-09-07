@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newpackage;
+package com.appointment.project;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author User
  */
-public class LoginServlet extends HttpServlet {
+@WebServlet("/AddAppointmentsServlet")
+public class AddAppointmentServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,24 +37,29 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet AddAppointmentServlet</title>");            
             out.println("</head>");
             out.println("<body>");
             
-            //feth data from login form
+            String name = request.getParameter("name");
+            String age = request.getParameter("age");
+            String gender = request.getParameter("gender");          
+            String number = request.getParameter("number");
+            String email = request.getParameter("email");
+            String consultant = request.getParameter("consultant");
+            String description = request.getParameter("description");          
+            String date = request.getParameter("date");
             
-            String logemail = request.getParameter("email");
-            String logpass = request.getParameter("password");
-            
-            UserDatabase db =  new UserDatabase(DBConnection.getConnection());
-            User user = db.logUser(logemail, logpass);
-            
-            if(user!=null){
-                HttpSession session = request.getSession();
-                session.setAttribute("logUser", user);
-                response.sendRedirect("main_index.jsp");
-            }else{
-                out.println("user not found");
+            Appointments appointment = new Appointments(name,age,gender,number,email,consultant,description,date);
+            try{
+                AppointmentsDao adao = new AppointmentsDao(DBAPConnection.getConnection());
+                if(adao.addAppointment(appointment)){
+                    response.sendRedirect("index.jsp");
+                }else{
+                    out.print("Error");
+                }
+                
+            }catch(IOException e){
             }
             
             out.println("</body>");

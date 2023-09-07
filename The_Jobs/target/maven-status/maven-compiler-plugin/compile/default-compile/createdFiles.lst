@@ -1,6 +1,0 @@
-newpackage\UserDatabase.class
-newpackage\DBConnection.class
-newpackage\LoginServlet.class
-newpackage\LogoutServlet.class
-newpackage\RegisterServlet.class
-newpackage\User.class

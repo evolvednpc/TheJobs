@@ -12,6 +12,30 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>newpackage.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddApplicantServlet</servlet-name>
+        <servlet-class>com.applicant.project.AddApplicantServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditApplicantServlet</servlet-name>
+        <servlet-class>com.applicant.project.EditApplicantServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteApplicantServlet</servlet-name>
+        <servlet-class>com.applicant.project.DeleteApplicantServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddAppointmentServlet</servlet-name>
+        <servlet-class>com.appointment.project.AddAppointmentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditAppointmentServlet</servlet-name>
+        <servlet-class>com.appointment.project.EditAppointmentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteAppointmentServlet</servlet-name>
+        <servlet-class>com.appointment.project.DeleteAppointmentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -23,6 +47,30 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddApplicantServlet</servlet-name>
+        <url-pattern>/AddApplicantServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditApplicantServlet</servlet-name>
+        <url-pattern>/EditApplicantServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteApplicantServlet</servlet-name>
+        <url-pattern>/DeleteApplicantServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddAppointmentServlet</servlet-name>
+        <url-pattern>/AddAppointmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditAppointmentServlet</servlet-name>
+        <url-pattern>/EditAppointmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteAppointmentServlet</servlet-name>
+        <url-pattern>/DeleteAppointmentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
