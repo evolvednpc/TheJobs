@@ -28,7 +28,7 @@
                         <a class="nav-item nav-link" href="applicantAppointment.jsp">Appointment</a>
                         <a class="nav-item nav-link" href="applicant.jsp">Applicant</a>
                         <a class="nav-item nav-link" href="#">Contact</a>
-                        <a class="nav-item nav-link" href="login.jsp">Login</a>
+                        <a class="nav-item nav-link" href="LogoutServlet">LogOut</a>
                     </div>
                 </div>
             </nav>

@@ -43,7 +43,7 @@
         <!-- Nav -->
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand fs-2 fw-bold" href="staffwelcome.jsp">The Jobs</a>
+                <a class="navbar-brand fs-2 fw-bold" href="main_index.jsp">The Jobs</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,7 +53,7 @@
                         <a class="nav-item nav-link" href="applicantAppointment.jsp">Appointment</a>
                         <a class="nav-item nav-link" href="applicant.jsp">Applicant</a>
                         <a class="nav-item nav-link" href="editApplicant.jsp">Edit Applicant</a>
-                        <a class="nav-item nav-link" href="login.jsp">Login</a>
+                        
                         <a class="nav-item nav-link" href="LogoutServlet">LogOut</a>
                     </div>
                 </div>

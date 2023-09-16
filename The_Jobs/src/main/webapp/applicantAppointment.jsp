@@ -56,7 +56,7 @@
                         <a class="nav-item nav-link" href="#">Services</a>
                         <a class="nav-item nav-link" href="#">Consultants</a>
                         <a class="nav-item nav-link" href="applicantAppointment.jsp">Appointment</a>
-                        <a class="nav-item nav-link" href="#">Contact</a>
+                        <a class="nav-item nav-link" href="contact.jsp">Contact</a>
                         <a class="nav-item nav-link" href="login.jsp">Login</a>
                     </div>
                 </div>
